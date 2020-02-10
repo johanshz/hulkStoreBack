@@ -36,7 +36,6 @@ public class ProductServiceTest {
         MockitoAnnotations.initMocks(this);
         productService = new ProductServiceImpl(productRepository);
 
-        //testPublisher = TestPublisher.create();
         product = new ProductEntity(1);
         product1 = new ProductEntity(
                 "Producto 1",

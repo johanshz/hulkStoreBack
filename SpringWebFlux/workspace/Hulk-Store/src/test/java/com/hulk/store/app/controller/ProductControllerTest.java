@@ -21,12 +21,9 @@ public class ProductControllerTest {
 	
 	 @MockBean
 	    private String ResourceUrl = "http://localhost:8080/hulkstore/product";
-	    private String ResourceUrlSale = "http://localhost:8080/hulkstore/product/sale/";
 	    private TestRestTemplate testRestTemplate;
 	    private ObjectMapper mapper;
-		@Autowired
-		private ProductService productService;
-	    
+
 	    @BeforeEach
 	    void setUp() {
 	        testRestTemplate = new TestRestTemplate();
@@ -113,10 +110,7 @@ public class ProductControllerTest {
 		HttpEntity<ProductEntity> request = new HttpEntity<>(new ProductEntity(
 				10
 		));
-
-		//ProductEntity response = testRestTemplate.postForObject(ResourceUrl+"/sale/11", request, ProductEntity.class);
 		boolean response = testRestTemplate.postForObject(ResourceUrl+"/buy/12", request, boolean.class);
-		//assertEquals(10,response.getQuantity());
 		assertEquals(true,response);
 	}
 

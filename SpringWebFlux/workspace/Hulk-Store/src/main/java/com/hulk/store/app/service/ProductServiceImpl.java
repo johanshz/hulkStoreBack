@@ -86,7 +86,6 @@ public class ProductServiceImpl implements ProductService {
 			
 	 	}
 		return sold;
-		//return (sold)?"successful sale":"there is no stock";
 		
 	}
 
@@ -109,7 +108,6 @@ public class ProductServiceImpl implements ProductService {
 			
 	 	}
 		return bought;
-		//return (bought)?"purchased successful":"purchase does not make";
 	}
 
 }
